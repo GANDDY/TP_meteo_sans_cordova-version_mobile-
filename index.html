@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+            https://cordova.apache.org/docs/en/latest/
+        Some notes:
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="dist/style.css">
+    <title>Document</title>
+</head>
+
+<body class="bg-gradient-to-r from-sky-500 to-indigo-500 text-white">
+    <header class=" bg-black">
+        <h1 class="text-center">Mon Appli Météo</h1>
+
+
+
+             <!-- Cercle de chargement -->
+    <div id="loading" class="spinner"></div>
+
+    </header class="bg-white">
+
+    <main id="corps">
+
+        <div id="bande" class="p-3 text-black">
+            <h2 class="text-center text-lg font-bold mt-5">LES PRÉVISIONS MÉTÉOROLOGIQUES EN FRANCE À 5 JOURS</h2>
+
+            <form class="max-w-md mx-auto mt-5">
+                <label for="default-search"
+                    class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+                <div class="relative">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                        </svg>
+                    </div>
+                    <!-- default-search -->
+                    <input type="search" id="ville"
+                        class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500  dark:border-gray-600 dark:placeholder-gray-400 dark:text-black font-bold"
+                        placeholder="Entrer une ville" required />
+                        
+                </div>
+                <div id="boxAutocomple" class="cursor-pointer"></div>
+            </form>
+            
+
+
+
+            <div id="button" class="text-center mt-5">
+                <button type="button" id="position"
+                    class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 shadow-lg hover:shadow-blue-400 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2  dark:text-black dark:border-gray-600   "><span
+                        class="material-symbols-outlined">
+                        share_location
+                    </span> Ma Position</button>
+
+                <button type="button" id="recherche"
+                    class=" text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4  shadow-lg hover:shadow-blue-400 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2  dark:text-black dark:border-gray-600   "><span
+                        class="material-symbols-outlined">
+                        search
+                    </span class=""> Recherche</button>
+            </div>
+        </div>
+
+
+    
+ 
+        
+
+
+
+    </main>
+    <script src="js/jQuery v3.7.1.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
